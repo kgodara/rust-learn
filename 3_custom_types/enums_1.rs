@@ -40,4 +40,4 @@ fn main() {
     inspect(click);
     inspect(load);
     inspect(unload);
-} 
+}
