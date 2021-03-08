@@ -1,0 +1,16 @@
+If your crates requires some prerequisites to compile, such as code generation or native compilation, a build script can be added to cargo.
+
+Build scripts can be either added to the Cargo.toml as follows:
+
+[package]
+...
+build = "build.rs"
+
+Or, provided in a build.rs file which Cargo will automatically look for.
+
+A build script is just a file that is compiled and run before compilation for the crate begins.
+
+Cargo provides the build script with certain environment variables.
+
+Lines printed from the build script and prefixed with `cargo:` will be interpreted directly by Cargo and can be used to define parameters for compilation.
+
